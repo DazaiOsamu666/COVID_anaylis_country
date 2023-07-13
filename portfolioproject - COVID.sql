@@ -1,3 +1,5 @@
+--DATA SOURCE: https://ourworldindata.org/covid-deaths
+
 SELECT Location,date,total_cases,new_cases,total_deaths,population
 FROM CovidDeaths
 Order by 1,2
