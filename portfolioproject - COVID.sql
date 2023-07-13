@@ -11,14 +11,14 @@ FROM CovidDeaths
 Where location = 'India' AND continent is not NULL
 Order by 1,2 
 
--- total cases vs population
+-- total cases vs population covid in India by 5 Jul 2023
 SELECT Location,date,total_cases,population,(CAST(total_cases AS int)/population)*100 as InfectionPercentage
 FROM CovidDeaths
 Where location = 'India' AND continent is not NULL
 Order by 1,2 
 
 
---Highest Infection rate to population
+--Highest Infection rate to population worldwide
 SELECT Location,population,MAX(CAST(total_cases AS int)) as HighestInfectionCount,MAX(CAST(total_cases AS int)/population)*100 as MaxInfectionPercentage
 FROM CovidDeaths 
 Where continent is not NULL
